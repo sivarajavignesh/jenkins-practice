@@ -1,14 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                sh 'echo Hello from GitHub'
+                sh 'echo Code pulled from GitHub'
             }
         }
-        stage('Second') {
+        stage('Build') {
             steps {
-                sh 'echo This is second stage'
+                sh 'echo Building the app...'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo Running tests...'
             }
         }
     }
